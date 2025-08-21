@@ -131,16 +131,16 @@ const HeroSection = () => {
           <h3 className="font-poppins font-semibold text-lg mb-4 text-center">Opening Hours</h3>
           <div className="space-y-2 text-sm font-poppins">
             <div className="flex justify-between">
-              <span>Monday - Friday:</span>
+              <span>Monday - Tuesday:</span>
+              <span className="text-red-400">CLOSED</span>
+            </div>
+            <div className="flex justify-between">
+              <span>Wednesday - Friday:</span>
+              <span className="text-[#FFD1A3]">8:30 AM - 4:30 PM</span>
+            </div>
+            <div className="flex justify-between">
+              <span>Saturday - Sunday:</span>
               <span className="text-[#FFD1A3]">8:00 AM - 4:00 PM</span>
-            </div>
-            <div className="flex justify-between">
-              <span>Saturday:</span>
-              <span className="text-[#FFD1A3]">8:00 AM - 3:00 PM</span>
-            </div>
-            <div className="flex justify-between">
-              <span>Sunday:</span>
-              <span className="text-[#FFD1A3]">9:00 AM - 3:00 PM</span>
             </div>
           </div>
         </motion.div>

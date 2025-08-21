@@ -5,7 +5,7 @@ import ContactForm from '@/components/ContactForm'
 
 const ContactSection = () => {
   const openWhatsApp = () => {
-    window.open('https://wa.me/447123456789?text=Hello%20Clifton\'s%20Coffee%20Shop!', '_blank')
+    window.open('https://wa.me/447361258652?text=Hello%20Clifton\'s%20Coffee%20Shop!', '_blank')
   }
 
   const openDirections = () => {
@@ -80,7 +80,7 @@ const ContactSection = () => {
                       onClick={openWhatsApp}
                       className="font-poppins text-[#25D366] hover:text-[#25D366]/80 transition-colors"
                     >
-                      +44 7123 456789
+                      07361 258652
                     </button>
                   </div>
                 </div>
@@ -92,10 +92,10 @@ const ContactSection = () => {
                   <div className="flex-1">
                     <p className="font-poppins font-semibold text-gray-800">Phone</p>
                     <a 
-                      href="tel:+441234567890"
+                      href="tel:+447361258652"
                       className="font-poppins text-[#9CAF88] hover:text-[#9CAF88]/80 transition-colors"
                     >
-                      +44 1234 567890
+                      07361 258652
                     </a>
                   </div>
                 </div>
@@ -125,16 +125,16 @@ const ContactSection = () => {
               </h3>
               <div className="space-y-3 font-poppins">
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-700">Monday - Friday</span>
+                  <span className="text-gray-700">Monday - Tuesday</span>
+                  <span className="text-red-500 font-semibold">CLOSED</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-700">Wednesday - Friday</span>
+                  <span className="text-[#9CAF88] font-semibold">8:30 AM - 4:30 PM</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-700">Saturday - Sunday</span>
                   <span className="text-[#9CAF88] font-semibold">8:00 AM - 4:00 PM</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-700">Saturday</span>
-                  <span className="text-[#9CAF88] font-semibold">8:00 AM - 3:00 PM</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-700">Sunday</span>
-                  <span className="text-[#9CAF88] font-semibold">9:00 AM - 3:00 PM</span>
                 </div>
               </div>
               <div className="mt-4 p-3 bg-[#FFD1A3]/10 rounded-lg">

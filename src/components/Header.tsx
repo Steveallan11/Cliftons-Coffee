@@ -55,6 +55,18 @@ const Header = () => {
               >
                 Menu
               </button>
+              <Link
+                to="/events"
+                className="hover:text-[#FFD1A3] transition-colors duration-300"
+              >
+                What's On
+              </Link>
+              <Link
+                to="/blog"
+                className="hover:text-[#FFD1A3] transition-colors duration-300"
+              >
+                News
+              </Link>
               <button 
                 onClick={() => scrollToSection('about')}
                 className="hover:text-[#FFD1A3] transition-colors duration-300"
@@ -162,6 +174,20 @@ const Header = () => {
               >
                 Menu
               </button>
+              <Link
+                to="/events"
+                onClick={() => setIsMenuOpen(false)}
+                className="block w-full text-left py-2 hover:text-[#FFD1A3] transition-colors duration-300"
+              >
+                What's On
+              </Link>
+              <Link
+                to="/blog"
+                onClick={() => setIsMenuOpen(false)}
+                className="block w-full text-left py-2 hover:text-[#FFD1A3] transition-colors duration-300"
+              >
+                News
+              </Link>
               <button 
                 onClick={() => scrollToSection('about')}
                 className="block w-full text-left py-2 hover:text-[#FFD1A3] transition-colors duration-300"

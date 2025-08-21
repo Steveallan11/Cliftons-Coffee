@@ -18,7 +18,8 @@ import {
   Sun,
   Settings,
   Activity,
-  Check
+  Check,
+  FileText
 } from 'lucide-react'
 import { useAuth } from '@/contexts/AuthContext'
 import { supabase } from '@/lib/supabase'
@@ -28,9 +29,13 @@ import AnalyticsDashboard from '@/components/AnalyticsDashboard'
 import MessagesManagement from '@/components/MessagesManagement'
 import OrderDetailsModal from '@/components/OrderDetailsModal'
 import BookingCalendar from '@/components/BookingCalendar'
+import MenuManagement from '@/components/MenuManagement'
+import EventsManagement from '@/components/EventsManagement'
+import BlogManagement from '@/components/BlogManagement'
+import TicketSalesManagement from '@/components/TicketSalesManagement'
 import toast from 'react-hot-toast'
 
-type TabType = 'overview' | 'analytics' | 'menu' | 'orders' | 'bookings' | 'calendar' | 'messages' | 'customers'
+type TabType = 'overview' | 'analytics' | 'menu' | 'orders' | 'bookings' | 'calendar' | 'messages' | 'events' | 'blog' | 'tickets' | 'customers'
 
 interface Order {
   id: number
@@ -314,6 +319,9 @@ const AdminDashboard = () => {
     { id: 'calendar', name: 'Booking Calendar', icon: Activity },
     { id: 'messages', name: 'Messages', icon: MessageCircle },
     { id: 'menu', name: 'Menu Management', icon: Coffee },
+    { id: 'events', name: 'Events Management', icon: Calendar },
+    { id: 'tickets', name: 'Ticket Sales', icon: AlertTriangle },
+    { id: 'blog', name: 'Blog Management', icon: FileText },
     { id: 'customers', name: 'Customers', icon: Users }
   ]
 
@@ -835,15 +843,22 @@ const AdminDashboard = () => {
 
           {/* Menu Tab */}
           {activeTab === "menu" && (
-            <div className="space-y-6">
-              <h2 className={`text-2xl font-semibold ${darkMode ? "text-white" : "text-gray-800"}`}>Menu Management</h2>
-              <div className={`${darkMode ? "bg-gray-800 border-gray-700" : "bg-white border-gray-200"} rounded-lg shadow-sm border p-6`}>
-                <div className="text-center py-12">
-                  <Coffee className={`w-16 h-16 mx-auto mb-4 ${darkMode ? "text-gray-600" : "text-gray-300"}`} />
-                  <p className={`text-lg ${darkMode ? "text-gray-400" : "text-gray-500"}`}>Menu management coming soon</p>
-                </div>
-              </div>
-            </div>
+            <MenuManagement darkMode={darkMode} />
+          )}
+
+          {/* Events Tab */}
+          {activeTab === "events" && (
+            <EventsManagement darkMode={darkMode} />
+          )}
+
+          {/* Blog Tab */}
+          {activeTab === "blog" && (
+            <BlogManagement darkMode={darkMode} />
+          )}
+          
+          {/* Tickets Tab */}
+          {activeTab === "tickets" && (
+            <TicketSalesManagement darkMode={darkMode} />
           )}
 
           {/* Customers Tab */}

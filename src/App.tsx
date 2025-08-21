@@ -12,6 +12,10 @@ import AdminLogin from '@/pages/AdminLogin'
 import AdminDashboard from '@/pages/AdminDashboard'
 import OrderCheckout from '@/pages/OrderCheckout'
 import AuthCallback from '@/pages/AuthCallback'
+import EventsPage from '@/pages/EventsPage'
+import BlogPage from '@/pages/BlogPage'
+import EventDetailPage from '@/pages/EventDetailPage'
+import BlogDetailPage from '@/pages/BlogDetailPage'
 import { initializeDatabase, checkDatabaseStatus } from '@/utils/initializeDatabase'
 import './App.css'
 
@@ -84,6 +88,10 @@ function App() {
                 <Header />
                 <Routes>
                   <Route path="/" element={<HomePage />} />
+                  <Route path="/events" element={<EventsPage />} />
+                  <Route path="/events/:slug" element={<EventDetailPage />} />
+                  <Route path="/blog" element={<BlogPage />} />
+                  <Route path="/blog/:slug" element={<BlogDetailPage />} />
                   <Route path="/admin-login" element={<AdminLogin />} />
                   <Route path="/admin" element={<AdminDashboard />} />
                   <Route path="/checkout" element={<OrderCheckout />} />

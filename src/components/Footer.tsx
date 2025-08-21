@@ -119,10 +119,10 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <Phone className="text-[#9CAF88]" size={18} />
                 <a 
-                  href="tel:+441234567890" 
+                  href="tel:+447361258652" 
                   className="font-poppins text-gray-300 hover:text-[#9CAF88] transition-colors text-sm"
                 >
-                  +44 1234 567890
+                  07361 258652
                 </a>
               </div>
               <div className="flex items-center space-x-3">
@@ -139,9 +139,9 @@ const Footer = () => {
             <div className="mt-6 p-4 bg-white/5 rounded-lg">
               <h5 className="font-poppins font-semibold text-[#FFD1A3] mb-2">Opening Hours</h5>
               <div className="space-y-1 text-xs font-poppins text-gray-400">
-                <div>Mon-Fri: 8AM-4PM</div>
-                <div>Sat: 8AM-3PM</div>
-                <div>Sun: 9AM-3PM</div>
+                <div>Mon-Tue: CLOSED</div>
+                <div>Wed-Fri: 8:30AM-4:30PM</div>
+                <div>Sat-Sun: 8AM-4PM</div>
               </div>
             </div>
           </motion.div>
